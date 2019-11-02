@@ -5,13 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import {HttpClientModule, HttpClient } from '@angular/common/http';
-// import { UserListComponent } from './user-list/user-list.component';
+import { TimeAgoPipe } from './time-ago.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    // UserListComponent
+    TimeAgoPipe,
   ],
   imports: [
     BrowserModule,
