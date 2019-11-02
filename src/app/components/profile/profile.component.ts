@@ -8,13 +8,19 @@ import { ProfileService } from 'src/app/services/profile.service';
 })
 export class ProfileComponent implements OnInit {
   user: any;
+  userRepos:any;
   imageWidth: number = 150;
   imageHeight: number = 200;
 
   constructor(private profileService: ProfileService) { 
-    this.profileService.getProfile().subscribe(user => {
+    this.profileService.getUser().subscribe(user => {
       console.log(user);
       this.user = user;
+    });
+
+    this.profileService.getUserRepos().subscribe(repos => {
+      console.log(repos);
+      this.userRepos = repos;
     })
   }
 

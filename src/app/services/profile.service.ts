@@ -13,8 +13,14 @@ export class ProfileService {
     this.username = 'njoroge33'
   }
 
-  getProfile() {
+  getUser() {
     return this.http.get('https://api.github.com/users/' + this.username, ({
+      headers: new HttpHeaders({Authorization: `token ${environment.apikey}`})
+    }))
+  }
+
+  getUserRepos() {
+    return this.http.get('https://api.github.com/users/' + this.username + '/repos', ({
       headers: new HttpHeaders({Authorization: `token ${environment.apikey}`})
     }))
   }
