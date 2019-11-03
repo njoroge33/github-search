@@ -9,10 +9,17 @@ import { ProfileService } from 'src/app/services/profile.service';
 export class ProfileComponent implements OnInit {
   user: any;
   userRepos:any;
+  username: string = 'njoroge33'
   imageWidth: number = 150;
   imageHeight: number = 200;
 
   constructor(private profileService: ProfileService) { 
+    
+  }
+
+  findUser () {
+    this.profileService.UpdateUser(this.username);
+
     this.profileService.getUser().subscribe(user => {
       console.log(user);
       this.user = user;
@@ -25,6 +32,7 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.findUser()
   }
 
 }

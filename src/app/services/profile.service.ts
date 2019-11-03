@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class ProfileService {
-  private username: string;
+  username: string;
  
   constructor(private http: HttpClient) { 
     console.log('service is now ready');
@@ -23,5 +23,9 @@ export class ProfileService {
     return this.http.get('https://api.github.com/users/' + this.username + '/repos', ({
       headers: new HttpHeaders({Authorization: `token ${environment.apikey}`})
     }))
+  }
+
+  UpdateUser(username:string) {
+    this.username = username;
   }
 }
