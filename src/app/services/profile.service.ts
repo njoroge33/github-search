@@ -7,10 +7,10 @@ import { environment } from 'src/environments/environment';
 })
 export class ProfileService {
   username: string;
+  repoName: string;
  
   constructor(private http: HttpClient) { 
     console.log('service is now ready');
-    this.username = 'njoroge33'
   }
 
   getUser() {
@@ -25,7 +25,18 @@ export class ProfileService {
     }))
   }
 
+  searchrepos() {
+    return this.http.get('https://api.github.com/search/repositories?q=' + this.repoName, ({
+      headers: new HttpHeaders({Authorization: `token ${environment.apikey}`})
+    }))
+  }
+
   UpdateUser(username:string) {
     this.username = username;
   }
+
+  UpdateRepo(repo:string) {
+    this.repoName = repo;
+  }
+
 }

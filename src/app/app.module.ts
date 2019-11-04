@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import {HttpClientModule} from '@angular/common/http';
 import { TimeAgoPipe } from './time-ago.pipe';
+import { ReposComponent } from './components/repos/repos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     TimeAgoPipe,
+    ReposComponent,
   ],
   imports: [
     BrowserModule,

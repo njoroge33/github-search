@@ -1,1 +1,14 @@
-<p>repos works!</p>
+<form>
+    <div class="form-group">
+        <label>SEARCH BY:</label>
+        <input type="text" name="search" [(ngModel)]='repoName'>
+    </div>
+</form>
+
+<div class="card">
+    <div class="card-body" *ngFor='let item of repoitems'>
+        <a href="{{item.html_url}}" target="_blank">{{item.name}}</a>
+        <p>Language Used: {{item.language}}</p>
+    </div>
+
+</div>
