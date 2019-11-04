@@ -23,4 +23,4 @@ No known bugs at the moment
 
 ### License
 * MIT
-`Copyright (c) 2019 **John Gichuhi**delanistudio`
+`Copyright (c) 2019 John Gichuhi github-search`
