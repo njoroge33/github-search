@@ -8,6 +8,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import {HttpClientModule} from '@angular/common/http';
 import { TimeAgoPipe } from './time-ago.pipe';
 import { ReposComponent } from './components/repos/repos.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ReposComponent } from './components/repos/repos.component';
     ProfileComponent,
     TimeAgoPipe,
     ReposComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,

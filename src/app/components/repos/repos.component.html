@@ -7,7 +7,7 @@
             </div>
         </form>
 
-        <div *ngIf="repoitems">
+        <div *ngIf="repoitems" appHighlight>
             <div class="card" *ngFor='let item of repoitems'>
                 <div class="card-body">
                     <a href="{{item.html_url}}" target="_blank"><strong>{{item.name}}</strong></a>
