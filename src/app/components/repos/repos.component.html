@@ -7,9 +7,9 @@
             </div>
         </form>
 
-        <div *ngIf="repoitems" appHighlight>
+        <div *ngIf="repoitems" >
             <div class="card" *ngFor='let item of repoitems'>
-                <div class="card-body">
+                <div class="card-body" appHighlight>
                     <a href="{{item.html_url}}" target="_blank"><strong>{{item.name}}</strong></a>
                     <p><strong>Created:</strong> {{item.created_at|dateAgo}}</p>
                     <p><strong>Created by:</strong> {{item.owner.login}}</p>
